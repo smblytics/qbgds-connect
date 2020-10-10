@@ -30,12 +30,15 @@ To use QBGDS Connect:
 1. Use the link you were provided to create a new data source in Google Data Studio with the connector
 2. Provide the connector a [user token](https://help.quickbase.com/user-assistance/create_user_tokens.html) as the "key" for authentication -- note this _must_ have access to the application and table you expect to use in Google Data Studio
 3. QBGDS will then prompt for more information -- (A) Enter a [realm](https://help.quickbase.com/user-assistance/what_is_a_realm.html) hostname for your Quick Base account (enter the full URL including quickbase.com), and (B) Enter a table ID (the [dbid](https://community.quickbase.com/browse/blogs/blogviewer?BlogKey=ad94a056-f327-4576-9dc5-fa79fcf79bbd&CommunityKey=d860b0f8-6a48-487b-b346-44c47a19a804&tab=blogviewer) of a table).  
+4. Use as a normal Google Data Studio [data connector](https://support.google.com/datastudio/answer/6268208?hl=en).  Certain field types are not supported (like multi-text, vCard, etc.) and will not be returned in Data Studio.
 
+### Defintions
+**Realm**
 ```
-## Realm
 A Quick Base realm is a logical slice of Quick Base dedicated to your organization that you control. Realms are defined using a DNS sub-domain with the format: https://customername.quickbase.com.
-
-## Table ID / DBID
+```
+**Table ID / DBID**
+```
 Quick Base uses an alphanumeric database ID, or DBID, to uniquely identify each app and each table on our platform. You can find the DBID of a table in the address bar of your browser when you're looking at any page of the table. The home page of all Quick Base applications has a DBID that does not refer to any of the tables in the application. You can view a record or a report on one of your tables, then look in your browser's address bar to see that table's DBID. The DBID is after the "https://mycompany.quickbase.com/db/"; and before the first question mark "?" if there is one. For example the dbid in the following URL:
 
 https://login.quickbase.com/db/6ewwzuuj?a=dr&r=ej&rl=bjd
@@ -44,8 +47,6 @@ is
 
 6ewwzuuj
 ```
-
-4. Use as a normal Google Data Studio [data connector](https://support.google.com/datastudio/answer/6268208?hl=en).  Certain field types are not supported (like multi-text, vCard, etc.) and will not be returned in Data Studio.
 
 ### Support or Contact
 
